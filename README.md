@@ -1,68 +1,60 @@
-# Swag Playwright Practice
+# 🧪 Swag Playwright Practice
 
-This project is a lightweight end-to-end automation practice suite using Playwright and TypeScript, targeting the Sauce Demo site (`https://www.saucedemo.com`).
+A lightweight end-to-end automation practice suite using **Playwright + TypeScript** for the Sauce Demo app: [https://www.saucedemo.com](https://www.saucedemo.com)
 
-## What this project highlights
+---
 
-- Page Object Model structure with clear separation
-- Realistic cart and checkout user flows (happy paths and negative validations)
-- Form-validation coverage for checkout step one:
-  - empty first name
-  - empty last name
-  - empty postal code
-- Login validation coverage for a locked-out user
-- End-to-end checkout verification with multiple item combinations (including all configured items)
-- CI/CD set up on Git Action
+## ✨ What This Project Covers
 
-## Quick start
+- 🧱 **Page Object Model (POM)** structure for clean test organization
+- 🔐 **Login scenarios** including locked-out user validation
+- 🛒 **Cart and checkout journeys** with realistic user flows
+- ✅ **Checkout Step One field validations**
+  - missing first name
+  - missing last name
+  - missing postal code
+- 🔁 **End-to-end purchase verification** across multiple item combinations
+- ⚙️ **CI-ready setup** with GitHub Actions support
 
-1. Install dependencies:
+---
 
+## 🚀 Quick Start
+
+### 1) Install dependencies
 ```bash
 yarn install
 ```
 
-2. Run tests:
-
+### 2) Run all tests
 ```bash
-yarn headless-test
+yarn playwright test
 ```
 
-3. Run with browser UI:
-
+### 3) Run tests in headed mode
 ```bash
-yarn headed-test
+yarn playwright test --headed
 ```
 
-4. Open the HTML report:
-
+### 4) Open Playwright HTML report
 ```bash
-yarn report
+yarn playwright show-report
 ```
 
-5. Generate and open Allure report:
+---
 
-```bash
-yarn report:allure:generate
-yarn report:allure:open
-```
+## 📁 Suggested Project Structure
 
-## CI/CD
+- `tests/` - test specs
+- `pages/` - page object classes
+- `utils/` - helper methods and reusable data
+- `playwright.config.ts` - Playwright configuration
 
-GitHub Actions is configured in `.github/workflows/playwright-ci.yml`.
+---
 
-- Triggers on `push`, `pull_request`, and manual runs (`workflow_dispatch`)
-- Installs dependencies and Playwright browser
-- Runs the Playwright suite in headless mode
-- Uploads these artifacts for each run:
-  - Playwright HTML report (`playwright-report`)
-  - Allure raw results (`allure-results`)
-  - Allure generated report (`allure-report`)
+## 🧠 Why This Repo?
 
-This gives quick feedback on each PR and makes reports easy to download and inspect.
+- Practice writing maintainable UI automation
+- Learn robust validation and assertion patterns
+- Build confidence with real-world Playwright workflows
 
-## Notes
-
-- Playwright config is in `playwright.config.ts`.
-- Base URL is set to Sauce Demo and tests are located in `Swag/specs`.
-- CI runs on Chromium in GitHub Actions, while local runs use Google Chrome channel.
+---
