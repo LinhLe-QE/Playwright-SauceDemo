@@ -1,0 +1,26 @@
+{
+    "INDIA": {
+        "validations": [
+            {
+                "name": "minLeminLengthValidation",
+                "message": "2 characters"
+            },
+            {
+                "name": "maxLengthValidation",
+                "message": "10 characters"
+            }
+        ]
+    },
+    "TAIWAN": {
+        "validations": [
+            {
+                "name": "minLeminLengthValidation",
+                "message": "9 digits"
+            },
+            {
+                "name": "maxLengthValidation",
+                "message": "9 digits"
+            }
+        ]
+    }
+}
