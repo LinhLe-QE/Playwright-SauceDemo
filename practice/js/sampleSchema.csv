@@ -1,3 +1,0 @@
-country, testData, expectedResult
-INDIA, 298181o1, Your TIN must be greater than 9 digits 
-TAIWAN, 1211**, Your TIN is invalid   
